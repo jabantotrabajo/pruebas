@@ -1,61 +1,53 @@
-name: "🐛 Reporte de Bug"
-description: "Crea un informe para ayudarnos a identificar y solucionar un problema."
-title: "[BUG]: "
-labels: ["bug", "triage"]
+name: "Formulario de Prueba"
+description: "Prueba"
 body:
   - type: markdown
     attributes:
       value: |
-        Gracias por tomarte el tiempo de reportar este problema. Por favor, completa el siguiente formulario con la mayor cantidad de información posible.
+        Markdown de prueba
 
   - type: input
-    id: descripcion_corta
+    id: version_software
     attributes:
-      label: "¿Qué está pasando?"
-      description: Una descripción clara y concisa de cuál es el error.
-      placeholder: Ej. El botón de inicio de sesión no hace nada al hacer clic.
-    validations:
-      required: true
-
-  - type: dropdown
-    id: entorno
-    attributes:
-      label: "Entorno donde ocurre"
-      options:
-        - Producción (En vivo)
-        - Staging / Testing
-        - Desarrollo local
+      label: "Versión del software"
+      description: "Indica la versión donde encontraste el problema."
+      placeholder: "Ej. v2.4.1"
     validations:
       required: true
 
   - type: textarea
-    id: pasos_reproducir
+    id: codigo_error
     attributes:
-      label: "Pasos para reproducir el error"
-      description: Cuéntanos exactamente qué estabas haciendo cuando falló.
-      placeholder: |
-        1. Ir a '...'
-        2. Hacer clic en '...'
-        3. Desplazarse hacia abajo hasta '...'
-        4. Ver el error
-    validations:
-      required: true
-
-  - type: textarea
-    id: comportamiento_esperado
-    attributes:
-      label: "¿Qué debería haber pasado?"
-      placeholder: Ej. Debería redirigir al panel de usuario y mostrar un mensaje de éxito.
+      label: "Logs o Código de error"
+      description: "Pega aquí el mensaje de error completo."
+      placeholder: "Pega el bloque de código aquí..."
+      render: bash # Formatea automáticamente el texto como código Bash/Terminal
     validations:
       required: false
 
-  - type: checkboxes
-    id: confirmaciones
+  - type: dropdown
+    id: sistema_operativo
     attributes:
-      label: "Verificaciones"
-      description: Por favor, marca las siguientes casillas antes de enviar.
+      label: "Sistema Operativo"
       options:
-        - label: "He buscado en los issues existentes y este no está duplicado."
+        - Windows
+        - macOS
+        - Linux
+        - Otro
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terminos_comunidad
+    attributes:
+      label: "Acuerdos"
+      options:
+        - label: "He leído el código de conducta."
           required: true
-        - label: "Este error es reproducible en la última versión del proyecto."
+        - label: "Estoy dispuesto a ayudar a solucionar este issue."
           required: false
+
+  - type: reactions
+    id: tipo_feedback
+    attributes:
+      label: "¿Cómo calificarías este problema?"
