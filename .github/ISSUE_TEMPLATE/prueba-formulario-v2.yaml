@@ -9,7 +9,7 @@ body:
         Gracias por tomarte el tiempo de reportar este problema. Por favor, completa el siguiente formulario con la mayor cantidad de información posible.
 
   - type: input
-    id: descripción_corta
+    id: descripcion_corta
     attributes:
       label: "¿Qué está pasando?"
       description: Una descripción clara y concisa de cuál es el error.
