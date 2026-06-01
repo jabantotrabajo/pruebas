@@ -46,8 +46,3 @@ body:
           required: true
         - label: "Estoy dispuesto a ayudar a solucionar este issue."
           required: false
-
-  - type: reactions
-    id: tipo_feedback
-    attributes:
-      label: "¿Cómo calificarías este problema?"
