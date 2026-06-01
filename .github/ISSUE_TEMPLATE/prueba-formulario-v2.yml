@@ -1,0 +1,61 @@
+name: "🐛 Reporte de Bug"
+description: "Crea un informe para ayudarnos a identificar y solucionar un problema."
+title: "[BUG]: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por tomarte el tiempo de reportar este problema. Por favor, completa el siguiente formulario con la mayor cantidad de información posible.
+
+  - type: input
+    id: descripción_corta
+    attributes:
+      label: "¿Qué está pasando?"
+      description: Una descripción clara y concisa de cuál es el error.
+      placeholder: Ej. El botón de inicio de sesión no hace nada al hacer clic.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: entorno
+    attributes:
+      label: "Entorno donde ocurre"
+      options:
+        - Producción (En vivo)
+        - Staging / Testing
+        - Desarrollo local
+    validations:
+      required: true
+
+  - type: textarea
+    id: pasos_reproducir
+    attributes:
+      label: "Pasos para reproducir el error"
+      description: Cuéntanos exactamente qué estabas haciendo cuando falló.
+      placeholder: |
+        1. Ir a '...'
+        2. Hacer clic en '...'
+        3. Desplazarse hacia abajo hasta '...'
+        4. Ver el error
+    validations:
+      required: true
+
+  - type: textarea
+    id: comportamiento_esperado
+    attributes:
+      label: "¿Qué debería haber pasado?"
+      placeholder: Ej. Debería redirigir al panel de usuario y mostrar un mensaje de éxito.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: confirmaciones
+    attributes:
+      label: "Verificaciones"
+      description: Por favor, marca las siguientes casillas antes de enviar.
+      options:
+        - label: "He buscado en los issues existentes y este no está duplicado."
+          required: true
+        - label: "Este error es reproducible en la última versión del proyecto."
+          required: false
