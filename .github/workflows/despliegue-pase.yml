@@ -10,7 +10,7 @@ on:
 jobs:
   # --- STAGE 1: Solicitud de pase (Inicialización) ---
   solicitud_pase:
-    if: contains(github.event.issue.labels.*.name, 'tipo:pase')
+    # if: contains(github.event.issue.labels.*.name, 'tipo:pase')
     runs-on: ubuntu-latest
     steps:
       - name: Inicializar solicitud de pase
