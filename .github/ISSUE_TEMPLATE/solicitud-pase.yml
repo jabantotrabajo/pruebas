@@ -119,7 +119,7 @@ body:
       value: "### 🧪 Instructivos del Pase a Certificación"
 
   - type: textarea
-    id: instructivos
+    id: instructivos_certificacion
     attributes:
       label: "🧪 Instructivos del Pase a Certificación"
       description: "Detalla paso a paso las instrucciones técnicas que ejecutará el GitHub Action."
@@ -133,7 +133,7 @@ body:
       value: "### 🚀 Instructivos del Pase a Producción"
 
   - type: textarea
-    id: instructivos
+    id: instructivos_produccion
     attributes:
       label: "🚀 Instructivos del Pase a Producción"
       description: "Detalla paso a paso las instrucciones técnicas que ejecutará el GitHub Action."
@@ -147,7 +147,7 @@ body:
       value: "### 🔄 Instructivos de Reversión"
 
   - type: textarea
-    id: instructivos
+    id: instructivos_reversion
     attributes:
       label: "🔄 Instructivos de Reversión"
       description: "Detalla paso a paso las instrucciones técnicas que ejecutará el GitHub Action."
