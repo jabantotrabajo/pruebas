@@ -1,15 +1,10 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Flujo DataOps - Despliegue a Certificación
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  issues:
-    types: [opened]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+   issues:
+     types: [opened]
+     branches: [main]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -25,7 +20,7 @@ jobs:
   stage_revision_checklist:
     needs: solicitud_pase
     runs-on: ubuntu-latest
-    environment: 1-Revision-Checklist
+    environment: Revision-Checklist
     steps:
       - name: Validar Checklist OK
         run: echo "Checklist aprobado por el DE Referente."
@@ -34,7 +29,7 @@ jobs:
   stage_aprobacion_seguridad:
     needs: stage_revision_checklist
     runs-on: ubuntu-latest
-    environment: 2-Aprobacion-Seguridad
+    environment: Aprobacion-Seguridad
     steps:
       - name: Validar Seguridad OK
         run: echo "Conformidad otorgada por el Analista de Seguridad."
@@ -43,7 +38,7 @@ jobs:
   stage_planificacion_y_configuracion_dataops:
     needs: stage_aprobacion_seguridad
     runs-on: ubuntu-latest
-    environment: 3-Planificacion-Ambiente-DataOps # <-- Configurar en Web para el rol DataOps
+    environment: Planificacion-Ambiente-DataOps # <-- Configurar en Web para el rol DataOps
     steps:
       - name: Ejecutar Tareas Previas de DataOps
         run: |
@@ -55,7 +50,7 @@ jobs:
     needs: stage_planificacion_y_configuracion_dataops
     runs-on: ubuntu-latest
     # Este entorno requiere que AMBOS roles aprueben en la web antes de ejecutar el código
-    environment: 4-Despliegue-y-Automatizacion-Conjunto 
+    environment: Despliegue-y-Automatizacion-Conjunto 
     steps:
       - name: Descargar repositorio
         uses: actions/checkout@v4
@@ -70,7 +65,7 @@ jobs:
   stage_validacion_funcional_steward:
     needs: stage_despliegue_y_automatizacion
     runs-on: ubuntu-latest
-    environment: 5-Validacion-Funcional-Steward # <-- Configurar en Web para el rol Data Steward
+    environment: Validacion-Funcional-Steward # <-- Configurar en Web para el rol Data Steward
     steps:
       - name: Validación Funcional de Negocio y Cierre
         run: |
