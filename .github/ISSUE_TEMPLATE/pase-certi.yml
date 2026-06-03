@@ -9,7 +9,7 @@ body:
   - type: dropdown
     id: cbo_squad_solicitante
     attributes:
-      label: "Squad Solicitante"
+      label: "👥 Squad Solicitante"
       options:
         - SQUAD 1
         - SQUAD 2
@@ -21,7 +21,7 @@ body:
   - type: input
     id: in_product_owner
     attributes:
-      label: "Product Owner"
+      label: "👑 Product Owner"
       description: "Indica el Product Owner responsable del producto."
       placeholder: "Ej. Juan Pérez"
     validations:
@@ -30,7 +30,7 @@ body:
   - type: input
     id: in_chapter_lead
     attributes:
-      label: "Chapter Lead"
+      label: "🛡️ Chapter Lead"
       description: "Indica el Chapter Lead responsable del producto."
       placeholder: "Ej. Gustavo López"
     validations:
@@ -39,7 +39,7 @@ body:
   - type: input
     id: in_data_engineer_responsable
     attributes:
-      label: "Data Engineer Responsable"
+      label: "⚙️ Data Engineer Responsable"
       description: "Indica el Data Engineer Responsable responsable del producto."
       placeholder: "Ej. Joaquin Abanto"
     validations:
@@ -48,7 +48,7 @@ body:
   - type: input
     id: in_analista_seguridad
     attributes:
-      label: "Analista de Seguridad"
+      label: "🔍 Analista de Seguridad"
       description: "Indica el Analista de Seguridad responsable del producto."
       placeholder: "Ej. Ana Martínez"
     validations:
@@ -57,7 +57,7 @@ body:
   - type: input
     id: in_custodio_tecnico
     attributes:
-      label: "Custodio Técnico"
+      label: "🔑 Custodio Técnico"
       description: "Indica el Custodio Técnico responsable del producto."
       placeholder: "Ej. Luis González"
     validations:
@@ -66,7 +66,7 @@ body:
   - type: input
     id: in_data_steward
     attributes:
-      label: "Data Steward"
+      label: "📊 Data Steward"
       description: "Indica el Data Steward responsable del producto."
       placeholder: "Ej. Jose Ramírez"
     validations:
@@ -75,7 +75,7 @@ body:
   - type: input
     id: in_link_jira
     attributes:
-      label: "Link a Jira"
+      label: "🔗 Link a Jira"
       description: "Indica el link a la tarea en Jira."
       placeholder: "Ej. https://jira.example.com/browse/PROJ-123"
     validations:
