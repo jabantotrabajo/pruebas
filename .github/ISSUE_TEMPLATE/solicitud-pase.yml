@@ -23,9 +23,6 @@ body:
       required: true
 
   # --- SECCIÓN EQUIPO SOLICITANTE ---
-  - type: markdown
-    attributes:
-      value: "### 👥 Equipo y Origen"
   - type: dropdown
     id: squad
     attributes:
@@ -114,10 +111,6 @@ body:
   # --- SECCIÓN INSTRUCTIVOS ---
 
   # --- INSTRUCTIVO DE PASE A CERTIFICACIÓN ---
-  - type: markdown
-    attributes:
-      value: "### 🧪 Instructivos del Pase a Certificación"
-
   - type: textarea
     id: instructivos_certificacion
     attributes:
@@ -128,10 +121,6 @@ body:
       required: true
 
   # --- INSTRUCTIVO DE PASE A PRODUCCIÓN ---
-  - type: markdown
-    attributes:
-      value: "### 🚀 Instructivos del Pase a Producción"
-
   - type: textarea
     id: instructivos_produccion
     attributes:
@@ -142,10 +131,6 @@ body:
       required: true
 
   # --- INSTRUCTIVO DE REVERSIÓN ---
-  - type: markdown
-    attributes:
-      value: "### 🔄 Instructivos de Reversión"
-
   - type: textarea
     id: instructivos_reversion
     attributes:
