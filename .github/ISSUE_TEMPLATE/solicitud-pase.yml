@@ -16,7 +16,7 @@ body:
   - type: input
     id: jira_subtask
     attributes:
-      label: "Código de la Subtarea de Jira"
+      label: "🆔 Código de la Subtarea de Jira"
       description: "Introduce el código de la subtarea ligada a este pase. El sistema validará su estado automáticamente."
       placeholder: "Ej: DATA-12345"
     validations:
@@ -29,7 +29,7 @@ body:
   - type: dropdown
     id: squad
     attributes:
-      label: "Squad Solicitante"
+      label: "👥 Squad Solicitante"
       options:
         - "Squad Canales Digitales"
         - "Squad Core Banking"
@@ -47,7 +47,7 @@ body:
   - type: dropdown
     id: product_owner
     attributes:
-      label: "Product Owner (PO)"
+      label: "👑 Product Owner (PO)"
       options:
         - "Alan Turing (PO Canales)"
         - "Ada Lovelace (PO Core)"
@@ -58,7 +58,7 @@ body:
   - type: dropdown
     id: de_chapter_leader
     attributes:
-      label: "Data Engineer Referente (Chapter Leader)"
+      label: "🛡️ Data Engineer Referente (Chapter Leader)"
       description: "Líder técnico encargado de la primera etapa de revisión."
       options:
         - "CL JUAN"
@@ -69,7 +69,7 @@ body:
   - type: dropdown
     id: de_responsable
     attributes:
-      label: "Data Engineer Responsable"
+      label: "⚙️ Data Engineer Responsable"
       description: "Ingeniero encargado de la ejecución técnica del pase."
       options:
         - "DE Pablo Ramirez"
@@ -80,7 +80,7 @@ body:
   - type: dropdown
     id: analista_seguridad
     attributes:
-      label: "Analista de Seguridad"
+      label: "🔍 Analista de Seguridad"
       description: "Encargado de validar políticas de accesos y masking de datos."
       options:
         - "SecOps - Luis"
@@ -91,7 +91,7 @@ body:
   - type: dropdown
     id: custodio_tecnico
     attributes:
-      label: "Custodio Técnico"
+      label: "🔑 Custodio Técnico"
       description: "Encargado de validar o ratificar la data POST pase a producción."
       options:
         - "Custodio - Finanzas"
@@ -103,7 +103,7 @@ body:
   - type: dropdown
     id: data_steward
     attributes:
-      label: "Data Steward"
+      label: "📊 Data Steward"
       description: "Garante del catálogo de datos y definiciones de negocio."
       options:
         - "Steward - Alex"
@@ -112,10 +112,44 @@ body:
       required: true
 
   # --- SECCIÓN INSTRUCTIVOS ---
+
+  # --- INSTRUCTIVO DE PASE A CERTIFICACIÓN ---
+  - type: markdown
+    attributes:
+      value: "### 🧪 Instructivos del Pase a Certificación"
+
   - type: textarea
     id: instructivos
     attributes:
-      label: "Instructivos del Pase"
+      label: "🧪 Instructivos del Pase a Certificación"
+      description: "Detalla paso a paso las instrucciones técnicas que ejecutará el GitHub Action."
+      placeholder: "1. Ejecutar script_migracion.sql\n2. Actualizar particiones en Data Lake..."
+    validations:
+      required: true
+
+  # --- INSTRUCTIVO DE PASE A PRODUCCIÓN ---
+  - type: markdown
+    attributes:
+      value: "### 🚀 Instructivos del Pase a Producción"
+
+  - type: textarea
+    id: instructivos
+    attributes:
+      label: "🚀 Instructivos del Pase a Producción"
+      description: "Detalla paso a paso las instrucciones técnicas que ejecutará el GitHub Action."
+      placeholder: "1. Ejecutar script_migracion.sql\n2. Actualizar particiones en Data Lake..."
+    validations:
+      required: true
+
+  # --- INSTRUCTIVO DE REVERSIÓN ---
+  - type: markdown
+    attributes:
+      value: "### 🔄 Instructivos de Reversión"
+
+  - type: textarea
+    id: instructivos
+    attributes:
+      label: "🔄 Instructivos de Reversión"
       description: "Detalla paso a paso las instrucciones técnicas que ejecutará el GitHub Action."
       placeholder: "1. Ejecutar script_migracion.sql\n2. Actualizar particiones en Data Lake..."
     validations:
